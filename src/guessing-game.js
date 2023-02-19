@@ -12,17 +12,17 @@ class GuessingGame {
 
     // this method returns solution candidate (you make an assumption based on range and previous assumptions)
     guess() {
-        console.log('guessing. left=', this.left)
+        // console.log('guessing. left=', this.left)
         // turn of right binary search solution
         // this.candidate = Math.floor((this.right - this.left) / 2) + this.left
         this.candidate = Math.ceil((this.right - this.left) / 2) + this.left
-        this.print()
+        // this.print()
         return this.candidate
     }
 
     // this method is called if prev call of guess() returned number which is greater than answer
     lower() {
-        console.log('lower')
+        // console.log('lower')
         // turn of right binary search solution
         // this.right = this.candidate - 1
         this.right = this.candidate
@@ -30,7 +30,7 @@ class GuessingGame {
 
     // this method is called if prev call of guess() returned number which is lower than answer
     greater() {
-        console.log('greater')
+        // console.log('greater')
         // turn of right binary search solution
         // this.left = this.candidate + 1
         this.left = this.candidate
